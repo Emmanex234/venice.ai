@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veniceai Token</title>
+    <link href="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66c8b125efca96ab43ae9656_favicon%20venice.png" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/token/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <aside class="sidebar">
+            <input type="text" placeholder="Search..." class="search-bar">
+            <nav>
+                <ul>
+                    <li>Token</li>
+                    <li>Chat</li>
+                    <li>Characters <span class="pro-badge">Pro</span></li>
+                </ul>
+            </nav>
+            <div class="folders">
+                <p>FOLDERS</p>
+            </div>
+            <div class="chats">
+                <p>CHATS</p>
+                <p>how do i prepare salary</p>
+            </div>
+            <div class="profile">
+                <div class="avatar"></div>
+                <p>Venice Guest</p>
+            </div>
+        </aside>
+
+        <main>
+  <div class="container2">
+    <div class="flex1">
+    <article>
+        <p>.</p>
+        <a href="/token/connect_wallet.html"><button class="connect-wallet1">Connect Wallet</button></a>
+    </article>
+    <header class="header">
+      <h1>Venice AI Token</h1>
+      <p>Own a share of unrestricted intelligence</p>
+    </header>
+    <div class="airdrop-section">
+      <div class="airdrop-info">
+        <h2>Airdrop</h2>
+        <p>Airdrop ends in <strong>41 days</strong></p>
+      </div>
+      <a href="/token/connect_wallet.html"><button class="connect-wallet">Connect Wallet</button></a>
+    </div>
+
+    
+  <div class="container3">
+    <div class="header2">
+      <p><strong>Current Capacity:</strong> <span class="capacity">181,480 VCU</span></p>
+    </div>
+    <div class="cards">
+      <!-- Staked Supply Card -->
+      <div class="card">
+        <h3>Staked Supply vs. Total Supply</h3>
+        <div class="chart">
+          <canvas id="stakedChart"></canvas>
+        </div>
+        <div class="legend">
+          <p><span class="dot green"></span> Total Staked <strong>7M</strong></p>
+          <p><span class="dot blue"></span> Total Supply <strong>100M</strong></p>
+        </div>
+      </div>
+      <!-- Network Utilization Card -->
+      <div class="card">
+        <h3>Network Utilization</h3>
+        <div class="chart">
+          <canvas id="utilizationChart"></canvas>
+          <p class="utilization-percentage">0.0%</p>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <script >
+    // Select the canvas elements
+const stakedCtx = document.getElementById("stakedChart").getContext("2d");
+const utilizationCtx = document.getElementById("utilizationChart").getContext("2d");
+
+// Chart for Staked Supply vs. Total Supply
+new Chart(stakedCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Total Staked", "Remaining Supply"],
+    datasets: [
+      {
+        data: [7, 93], // Staked: 7M, Remaining: 100M - 7M
+        backgroundColor: ["#00ff85", "#007bff"],
+        borderWidth: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    cutout: "75%",
+    plugins: {
+      tooltip: { enabled: false },
+    },
+  },
+});
+
+// Chart for Network Utilization
+new Chart(utilizationCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Used", "Unused"],
+    datasets: [
+      {
+        data: [0, 100], // 0% utilization
+        backgroundColor: ["#007bff", "#1e1e1e"],
+        borderWidth: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    cutout: "75%",
+    plugins: {
+      tooltip: { enabled: false },
+    },
+  },
+});
+  </script>
+
+</div>
+    <div class="overview-section">
+      <h2>Overview</h2>
+      <p>
+        The Venice token (<strong>VVV</strong>) is an access key for AI agents and developers to
+        consume private, uncensored inference through the Venice API, without paying per request.
+      </p>
+      <p>
+        Stakers control an ongoing flow of Venice’s inference capacity via its API, while receiving yield.
+      </p>
+      <div class="stats">
+        <p><strong>Price:</strong> $7.42 <span class="negative">(-27.40%)</span></p>
+        <p><strong>Total Supply:</strong> 100.26M</p>
+        <p><strong>Market Cap:</strong> $194.77M</p>
+        <p><strong>Staking Yield:</strong> APR 240.39%</p>
+        <p><strong>Contract:</strong>0xacfE</p>
+        <p><strong>Audit:</strong></p>
+        <p><strong>View Audit:</strong></p>
+        <p><strong>Links:</strong></p>
+      </div>
+    </div>
+        </main>
+         
+  </div>
+  
+    </div>
+</body>
+</html>

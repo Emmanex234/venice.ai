@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Disallow: /chat/
+Disallow: /api/
+Sitemap: https://venice.ai/sitemap.xml

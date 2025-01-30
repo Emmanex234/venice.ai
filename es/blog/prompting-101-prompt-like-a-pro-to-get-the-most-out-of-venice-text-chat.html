@@ -1,0 +1,185 @@
+<!DOCTYPE html><!-- Last Published: Tue Jan 28 2025 01:14:58 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="webflow.venice.ai" data-wf-page="6699117b5a5567e0d74686e7" data-wf-site="668e6f67ec8b61b6033ef1c8" lang="es" data-wf-locale="es" data-wf-collection="6699117b5a5567e0d74686dd" data-wf-item-slug="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat"><head><meta charset="utf-8"/><title>Indicación 101: pregunta como un profesional para aprovechar al máximo el chat de texto de Venice</title><link rel="alternate" hrefLang="x-default" href="../../blog/prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html"/><link rel="alternate" hrefLang="en" href="../../blog/prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html"/><link rel="alternate" hrefLang="es" href="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html"/><link rel="alternate" hrefLang="de" href="../../de/blog/prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html"/><meta content="Un poco de preparación antes de preguntar ayuda mucho. Esta guía resumirá cómo escribir instrucciones más eficaces para aprovechar todo el potencial de Venice." name="description"/><meta content="Indicación 101: pregunta como un profesional para aprovechar al máximo el chat de texto de Venice" property="og:title"/><meta content="Un poco de preparación antes de preguntar ayuda mucho. Esta guía resumirá cómo escribir instrucciones más eficaces para aprovechar todo el potencial de Venice." property="og:description"/><meta content="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e7d3437dda846540f66d_VeniceAI_BZTYRM7.png" property="og:image"/><meta content="Indicación 101: pregunta como un profesional para aprovechar al máximo el chat de texto de Venice" property="twitter:title"/><meta content="Un poco de preparación antes de preguntar ayuda mucho. Esta guía resumirá cómo escribir instrucciones más eficaces para aprovechar todo el potencial de Venice." property="twitter:description"/><meta content="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e7d3437dda846540f66d_VeniceAI_BZTYRM7.png" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/css/veniceai.c392272c5.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Inter:100,200,300,regular,500,600,700,800,900","Roboto:100,300,regular,500,700,900"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66c8b125efca96ab43ae9656_favicon%20venice.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/669d4a62ba8b7b97fa85d332_WEbclip%20image.png" rel="apple-touch-icon"/><link href="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html" rel="canonical"/>
+
+
+<script>
+  // Force dark mode as the default on first load, overriding system theme
+  if (!localStorage.getItem('dark-mode')) {
+    // Set dark mode as the default if no preference exists in localStorage
+    localStorage.setItem('dark-mode', 'true');
+    document.documentElement.classList.add('dark-mode');
+    document.documentElement.classList.remove('light-mode');
+  } else {
+    // Load the user's saved theme preference
+    const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
+    }
+  }
+
+  function checkAndApplyTheme() {
+    const isDarkModeActive = document.documentElement.classList.contains('dark-mode');
+    document.querySelectorAll('[data-theme]').forEach(el => {
+      const theme = el.getAttribute('data-theme');
+      el.style.display = (isDarkModeActive && theme === 'dark-only') || 
+                         (!isDarkModeActive && theme === 'light-only') ? 
+                         'block' : 'none';
+    });
+  }
+
+  function toggleTheme() {
+    const isDarkModeActive = document.documentElement.classList.contains('dark-mode');
+
+    if (isDarkModeActive) {
+      // Switch to light mode
+      document.documentElement.classList.remove('dark-mode');
+      document.documentElement.classList.add('light-mode');
+      localStorage.setItem('dark-mode', 'false');
+    } else {
+      // Switch to dark mode
+      document.documentElement.classList.remove('light-mode');
+      document.documentElement.classList.add('dark-mode');
+      localStorage.setItem('dark-mode', 'true');
+    }
+
+    checkAndApplyTheme();
+  }
+
+  function initializeThemeLogic() {
+    // Apply the correct theme on page load
+    checkAndApplyTheme();
+
+    // Add event listeners to toggle buttons (if applicable)
+    document.querySelectorAll('.theme-toggle-button').forEach(button => {
+      button.addEventListener('click', toggleTheme);
+    });
+
+    // Observe theme changes
+    const observer = new MutationObserver(checkAndApplyTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  document.addEventListener('DOMContentLoaded', initializeThemeLogic);
+</script>
+
+<!-- Load the dark mode toggle script -->
+<script 
+  tr-color-vars="toggle-offest,paragraph,text-color-1,page-bg,link-text-color-1,dividers,input-bg,input-placeholder,input-borders,tab-menu-bg,tab-menu-background,navbar-bg,navbar-dropdown-link-hover-bg,image-captions,buttn-primary-bg,buttn-secondary-bg,discount-pill-text,text-color-2,cards-bg,cards-bg-on-hover,footer-link-text,page-bg-2,gradient-color-1,gradient-color-2,gradient-color-3,gradient-color-4,cards-bg-2,text-color-3,slider-arrow-bg,page-bg-3,gradient-color-5,text-color-4,text-color-5,text-color-6,input-bg-2,input-borders-2,input-placeholder-2,gradient-color-6,gradient-color-7,cards-bg-3,cards-borders,text-color-7,tab-menu-bg-2,cards-bg-4,gradient-color-8,gradient-color-9,cards-bg-5,gradient-color-10,text-color-8,,shadow-color-1,shadow-color-2,shadow-color-3,gradient-color-11,link-text-color-2,nav-dropdown-list-bg,pricing-bttn-hover-bg,pricing-bttn-pressed-bg"
+  duration="0.5" 
+  ease="power1.out" 
+  src="https://cdn.jsdelivr.net/gh/flowtricks/scripts@v1.0.4/dark-mode-toggle.js">
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- amped venice. ai -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://amped.venice.ai/gxpgtclg.js?st='+i+dl+'';f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','KFP6HX49');</script>
+<!-- end amped venice ai -->
+
+<script>
+  const currentUrl = new URL(window.location.href);
+
+  if (currentUrl.hostname.toLowerCase() === 'webflow.venice.ai') {
+    currentUrl.hostname = 'venice.ai';
+    window.location.replace(currentUrl.href);
+  }
+</script>
+
+<style>
+/* Apply font smoothing globally */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+}
+
+/* Optionally, you can apply it to specific elements */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span, div {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+</style>
+<style class="embedly-css">
+        .card .hdr {
+          display: none;        
+
+</style>
+
+<style class="embedly-css">style:.card .hdr {
+          display: none;</style>
+
+
+<style>
+  /* Hide the header within the embedly card */
+  .embedly-card .hdr {
+    display: none !important;
+  }
+
+  /* Center the embed container */
+  .embed-container {
+    width: 68%;
+    margin: 0 auto;
+  }
+  .card .hdr  {
+    display: none !important;
+  }
+</style></head><body><div class="page-wrapper"><div class="w-embed"><style>
+body {
+ font-size: 1.1111111111111112vw;
+}
+/* Max Font Size */
+@media screen and (min-width:1440px) {
+ body {font-size: 16px;}
+}
+/* Container Max Width */
+.container {
+  max-width: 1440px;
+}
+/* Min Font Size */
+@media screen and (max-width:991px) {
+ body {font-size: 16px;}
+}
+
+</style></div><div class="main-wrapper"><div data-animation="over-left" class="navbar-2 w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="4d20776a-c57f-e598-bdeb-e628d1474644" role="banner" data-no-scroll="1" data-duration="700" data-doc-height="1"><div class="nav-container-v2"><a href="../../es.html" class="navigation-brand w-nav-brand"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/6736177e0a6000e490a4d08d_venice.ai.webp" loading="lazy" data-theme="light-only" alt="" class="navigation-brand-img"/><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/6738ca45527eda8f241fee04_venice.ai.svg" loading="lazy" data-theme="dark-only" alt="" class="navigation-brand-img"/></a><article role="navigation" class="nav-menu-v2 w-nav-menu"><div class="nav-menu-inner-2v"><a href="../what-is-venice.html" class="nav-link v2 w-nav-link">About</a><a href="../../blog/how-to-download-venice-to-your-phone.html" class="nav-link v2 w-nav-link">Mobile App</a><div data-delay="0" data-hover="false" data-w-id="4d20776a-c57f-e598-bdeb-e628d147464f" class="drop-down w-dropdown"><div class="toggle w-dropdown-toggle"><div>Product</div><div class="toggle-icon w-icon-dropdown-toggle"></div></div><nav class="dropdown-list small w-dropdown-list"><div class="wraper-outer"><a href="../text-generation.html" class="nav-dropdown-link w-inline-block"><div>Text generator</div></a><a href="../image-generation.html" class="nav-dropdown-link w-inline-block"><div>Image generator</div></a><a href="../code-generation.html" class="nav-dropdown-link w-inline-block"><div>Code generator</div></a></div></nav></div><a href="http://www.venice.ai/token" class="nav-link v2 w-nav-link">Token</a><a href="../pricing.html" class="nav-link v2 w-nav-link">Pricing</a><a href="../api.html" class="nav-link v2 w-nav-link">API</a><div data-delay="0" data-hover="false" data-w-id="4d20776a-c57f-e598-bdeb-e628d1474663" class="drop-down w-dropdown"><div class="toggle w-dropdown-toggle"><div>Resources</div><div class="toggle-icon w-icon-dropdown-toggle"></div></div><nav class="dropdown-list small w-dropdown-list"><div class="wraper-outer"><a href="../blog.html" class="nav-dropdown-link w-inline-block"><div>Blog</div></a><a href="../media.html" class="nav-dropdown-link w-inline-block"><div>Media</div></a><a href="../faqs.html" class="nav-dropdown-link w-inline-block"><div>FAQs</div></a></div></nav></div></div></article><div class="nav-right-wrapper"><div tr-color-toggle="" class="theme-switch"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/6738b29b548f28b99c96519e_sun.svg" loading="lazy" data-theme="light-only" alt="" class="theme-switch-icon"/><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/6738ca42b383817386dff59e_moon.svg" loading="lazy" data-theme="dark-only" alt="" class="theme-switch-icon"/></div><div class="menu-button w-nav-button"><div class="hamburger"><div class="hamburger-bars top"></div><div class="hamburger-bars middle"></div><div class="hamburger-bars last"></div></div></div></div></div></div><section class="characters-home-section"><div class="main-container pad-mobile"><div class="padding-verticle _144--113"><div class="venice-content-wraper"><div class="venice-title-wrap"><h1 class="title-36px">Indicación 101: pregunta como un profesional para aprovechar al máximo el chat de texto de Venice</h1><div class="wraper-team"><img src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/670ec1b1da9225fb7a431d8e_66991a9def9c7dde9f241407_Untitled_design__15_%20(3)-p-500.png" loading="lazy" alt="" class="venice-logo ellipse"/><div class="wraper-verticle"><div class="para-14px is-venice">Venice.ai</div><div class="para-14px">2024-09-20</div></div></div></div><div class="rich-text-wraper"><aside class="venice-rich-text w-richtext"><figure style="max-width:1536pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img alt="VeniceAI BZTYRM7" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e8014320fdd089d8b818_VeniceAI_BZTYRM7.png" loading="lazy"/></div></figure><p><strong><em>Mensaje de imagen: </em></strong><em>Asistente de inteligencia humana y artificial mirándose con los ojos abiertos, puntillismo luminiscente — Modelo: Playground v2.5 — Estilo: hiperrealismo</em> </p><p> </p><p>La IA generativa es la herramienta más poderosa desde Internet, pero su verdadero potencial reside en la forma en que la usas. </p><p>Los modelos de IA de código abierto de Venice ofrecen capacidades de vanguardia para la generación y el análisis de texto. Sin embargo, muchos usuarios se sienten decepcionados cuando reciben respuestas vagas, irrelevantes o tediosas. </p><p>El quid de la cuestión: mejores indicaciones conducen a mejores resultados. El oro entra, el oro sale. </p><p>Un poco de preparación antes de preguntar ayuda mucho. Esta guía resumirá cómo escribir instrucciones más eficaces para aprovechar todo el potencial de Venice </p><p>Antes de profundizar, destaquemos cómo Venice se diferencia de las aplicaciones de IA convencionales en aspectos clave: </p><ul role="list"><li><strong>Privacidad: </strong>No almacenamos tus mensajes o conversaciones. </li><li><strong>Sin censura: </strong>No añadimos restricciones a los modelos básicos. </li><li><strong>De código abierto: </strong>Utilizamos los modelos de código abierto más vanguardistas que la comunidad global de IA mejora continuamente </li></ul><p>Si dominas la creación de mensajes en Venice, obtendrás una poderosa herramienta para tareas como la redacción de contenido, como correos electrónicos, blogs o boletines informativos, la lluvia de ideas para tu próximo proyecto o la investigación de temas complejos. </p><p>Sumérjase en las técnicas que impulsarán sus conversaciones con Venice. </p><p>‍</p><h2>Indicación 101: ¿Qué es un aviso «bueno»?</h2><p>En pocas palabras, un mensaje es la entrada de texto que le das a Venice para guiar su respuesta. Es tu forma de comunicar lo que quieres de la IA. </p><p>Las buenas indicaciones son preguntas o consultas abiertas y, por lo general, incluyen: </p><ul role="list"><li>Instrucciones claras </li><li>Contexto relevante </li><li>Formato de salida deseado </li><li>Detalles o restricciones específicas </li></ul><p>Las malas indicaciones suelen ser demasiado breves, vagas, carecen de contexto o son demasiado amplias. En el peor de los casos, son preguntas cerradas de sí/no. </p><p>Vamos a comparar. </p><p>❌ <strong>Mensaje incorrecto:</strong> <em>«Háblame del café».</em> </p><p>Este mensaje es demasiado vago y amplio. No especifica qué aspecto del café te interesa, cuántos detalles quieres ni para qué planeas usar la información. Puede que obtengas una visión general genérica que no te sirva de nada, o que Venice se centre en un aspecto del café que no te interese, o que produzca una producción amplia y superficial. </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Bad prompt" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e801074a23e65314272e_Bad_prompt.png" loading="lazy"/></div></figure><p>❌ <strong>Mensaje incorrecto</strong> </p><p> </p><p>✅<strong> Buen aviso: </strong><em>«Estoy escribiendo una entrada de blog sobre cómo se hace el café. Detalla los principales pasos involucrados en la producción del café, desde el cultivo de los granos hasta el tostado. Me gustaría saber cómo cada paso puede afectar al sabor y la calidad. Mantén unas 300 palabras y usa un lenguaje que los amantes del café aprecien».</em> </p><p>La buena presentación le da a Venice una idea clara de lo que estás buscando, por qué lo necesitas y cómo quieres que se presente. Es mucho más probable que te dé una respuesta útil que se adapte a tus necesidades. </p><p>Del mismo modo, el buen mensaje establece un buen contexto fundamental para una conversación continua con Venice en caso de que necesites profundizar en el tema. A continuación, analizaremos la «incitación iterativa» con más detalle. </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Good prompt" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e801bec0efee57fd6414_Good_prompt.png" loading="lazy"/></div></figure><p>✅<strong> Buen aviso</strong> </p><p> </p><h2>Los mejores consejos para mejorar tus indicaciones</h2><p>Antes de profundizar en más técnicas de incitación, abordemos algunos consejos esenciales que mejorarán inmediatamente la calidad de tus indicaciones y te ayudarán a obtener respuestas más precisas y relevantes desde Venice </p><p> </p><h4>Añadir más contexto con los documentos (usuarios Pro)</h4><p>A menudo hay que añadir tanto contexto como sea posible en la solicitud, y los usuarios Pro pueden cargar los PDF o documentos pertinentes para que Venice tenga más información con la que trabajar. Esto es especialmente útil para las tareas de análisis o resumen. </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="PDF" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e801550f1c43da8c3d92_Screenshot_2024-07-17_at_22.43.21.png" loading="lazy"/></div></figure><p>Sube archivos PDF a tu chat con Venice haciendo clic en el icono del sujetapapeles o arrastrando y soltando el PDF en el campo de entrada </p><p>Ejemplo rápido: <em>«Acabo de subir un informe sobre el café en PDF. ¿Puedes decirme qué pasó con la producción de café en todo el mundo el año pasado? ¿Quizás centrarse en los principales países productores y en por qué sus cifras aumentaron o disminuyeron?»</em> </p><h4><strong>&gt;&gt; </strong><a href="../../chat/af31378f-cc46-4d72-9414-bcdddf160182.html#veniceShareKey=CnmKIk%2FLyiG0GnYrHOv0MkPv8VIjjsQcjRAvIW6oZ7E%3D&amp;veniceShareNonce=h%2FswW1caovEQsK89B%2ByCkhgFBb3GpAz8&amp;ref=jqNjMq" target="_blank"><strong>Haga clic aquí para ir a este chat de Venice</strong></a><strong> &lt;&lt; </strong></h4><p> </p><h4>Dé a Venice ejemplos de la salida deseada</h4><p>Muestre, no se limite a decir. Como cualquier asistente, Venice funcionará mejor si se le proporciona una muestra de lo que estás buscando para guiar su estilo, producción y formato. </p><p>Ejemplo de mensaje: <em>«Necesito escribir descripciones breves de los diferentes métodos de preparación del café para el menú de mi cafetería. Este es un ejemplo del estilo que quiero:</em> </p><p><em>«French Press: Una cerveza rica y con mucho cuerpo. Los granos gruesos se sumergen en agua caliente y luego se presionan para separarlos. El resultado es una taza robusta con más aceites y una sensación más espesa en la boca».</em> </p><p><em>¿Puedes escribir descripciones similares para los métodos de vertido y espresso?»</em> </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 15.58.12" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e801d56a011c9cf1405d_Screenshot_2024-07-18_at_15.58.12.png" loading="lazy"/></div></figure><h4><strong>Usar las indicaciones del sistema (usuarios Pro)</strong></h4><p>Los usuarios Pro pueden establecer instrucciones generales que se apliquen a toda la conversación: a <a target="_blank" href="../../blog/god-mode-the-power-of-ai-system-prompts.html">mensaje del sistema</a>. Esto es poderoso para mantener un tono o una experiencia consistentes. </p><p>Ejemplo de aviso del sistema:»<em>Eres un camarero amable que explica los conceptos del café a clientes curiosos. Usa un lenguaje sencillo y ejemplos con los que puedas identificarte. Evite la jerga y, cuando deba usar términos relacionados con el café, proporcione siempre una explicación clara».</em> </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 16.00.21" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e8019e6bf46933e72d71_Screenshot_2024-07-18_at_16.00.21.png" loading="lazy"/></div></figure><p>Con un indicador del sistema ahora en su lugar, su salida será más relevante para usted. Usemos el indicador de ejemplo: <em>«Explica la diferencia entre café tostado claro y oscuro».</em> </p><p><a target="_blank" href="../../blog/god-mode-the-power-of-ai-system-prompts.html">Más información sobre las indicaciones del sistema</a> </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 16.05.28" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e80190cfe5d05703e80e_Screenshot_2024-07-18_at_16.05.28.png" loading="lazy"/></div></figure><p>❌ <strong>Sin aviso del sistema</strong> </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 16.45.58" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e80104c86f2efcb4e073_Screenshot_2024-07-18_at_16.45.58.png" loading="lazy"/></div></figure><p>✅ <strong>Con indicador del sistema</strong> </p><h2>Más técnicas de incitación</h2><p>Ahora que dominas los fundamentos, es hora de mejorar tus habilidades de incitación. </p><p>Estas técnicas avanzadas lo ayudarán a abordar tareas más complejas y a extraer información aún más profunda de Venice. Analicemos algunos métodos eficaces que puedes utilizar para maximizar el rendimiento de la IA: </p><h4>La conversación profunda (indicaciones iterativas)</h4><p>Este enfoque implica el uso de una serie de indicaciones para refinar y mejorar progresivamente la producción de Venice. Es como pelar las capas de una cebolla, y cada pregunta profundiza en el tema. </p><p>Así es como funciona: </p><ol role="list"><li>Empieza con una pregunta amplia sobre tu tema. </li><li>Basado en la respuesta de Venice, haz una pregunta de seguimiento más específica. </li><li>Continúa con este proceso, usando cada respuesta como base para la siguiente pregunta. </li><li>Limítese gradualmente a la información precisa que busca. </li></ol><p>Esta técnica es especialmente útil cuando: </p><ul role="list"><li>Estás explorando un tema complejo </li><li>Al principio no estás seguro de lo que estás buscando exactamente </li><li>¿Quieres entender algo con mayor profundidad? </li></ul><p>Le permite adaptar sus preguntas en función de la información que recibe, como en una conversación natural. </p><p><strong>&gt;&gt;</strong> <a href="../../chat/570b91e3-99f9-4499-943b-e03b10a4a70a.html#veniceShareKey=Sx2Q7dxwIRnw%2B2ba945A%2FgInuQAqVbgLA39QUqxIXvs%3D&amp;veniceShareNonce=Xaugg7NUXYybjN3yEQTO4Z9fEefZ7bVe&amp;ref=jqNjMq" target="_blank">Haga clic aquí para ir a este chat de Venice</a><strong> &lt;&lt;</strong> </p><p> </p><h4>El desafío de las restricciones (indicaciones basadas en limitaciones)</h4><p>Este enfoque implica establecer restricciones o parámetros específicos para las respuestas de Venice Es como darle a Venecia un acertijo que resolver, en el que la solución debe ajustarse a ciertos límites. </p><p>Así es como funciona: </p><ol role="list"><li>Defina su pregunta o tarea principal </li><li>Añade una o más reglas específicas que Venice debe seguir </li><li>Pídele a Venice que complete la tarea dentro de estos límites. </li></ol><p>Este enfoque es útil cuando quieres respuestas concisas, ideas únicas o para probar la adaptabilidad de Venice. </p><p>Ejemplo de mensaje: <em>Escribe una breve descripción del ajetreo matutino de una cafetería, pero debes:</em> </p><p><em>Incluye al menos 3 detalles sensoriales</em> </p><p><em>No utilice las palabras «café», «cafetería» o «tienda»</em> </p><p><em>Termine con la opinión de un cliente</em> </p><p><em>Su descripción debe cumplir estas reglas con precisión.</em> </p><p>Esta técnica empuja a Venice a pensar de forma creativa sin salirse de los límites establecidos. A menudo da lugar a respuestas sorprendentes e innovadoras, lo que demuestra lo flexible que puede ser Venice a la hora de abordar solicitudes inusuales. </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 16.58.37" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e8015633b1810e9e78e3_Screenshot_2024-07-18_at_16.58.37.png" loading="lazy"/></div></figure><h4>The Prompt Engineer (MetaPrompting)</h4><p>Este método aprovecha Venice para ayudarte a encontrar mejores indicaciones. Es especialmente útil cuando estás atascado o no estás seguro de cómo abordar un problema. </p><p>Esta técnica es poderosa porque aprovecha la comprensión de Venice sobre las indicaciones efectivas. Cuando te cuesta articular lo que necesitas o quieres explorar un tema con más profundidad, Venice puede sugerirte enfoques que quizás no hayas considerado. </p><p>Ejemplo de mensaje: <em>«Estoy intentando escribir una historia sobre una cafetería, pero no sé por dónde empezar. ¿Podrías darme 5 indicaciones de IA diferentes que me ayudarían a desarrollar varios aspectos de la historia? Incluye indicaciones sobre el escenario, los personajes, la trama y la atmósfera. Hazlas lo suficientemente detalladas como para que pueda usarlas para obtener respuestas específicas y creativas de tu parte».</em> </p><p>Al solicitar varias indicaciones específicas, te preparas para recibir una variedad de puntos de partida útiles y específicos para tu historia. </p><figure class="w-richtext-align-center w-richtext-figure-type-image"><div><img alt="Screenshot 2024-07-18 at 16.21.36" src="https://cdn.prod.website-files.com/6699117ace0ff08d4d687d19/66a0e801331b75971cd9932e_Screenshot_2024-07-18_at_16.21.36.png" loading="lazy"/></div></figure><h2><strong>De estudiante a maestro rápido </strong></h2><p>Dominar la ingeniería rápida en Venice es un viaje continuo. Al aplicar estas técnicas, descubrirás todo el potencial de Venice para tareas que van desde la escritura creativa hasta la resolución de problemas complejos. </p><p>Recuerda que las funciones de privacidad y sin censura de Venice te permiten explorar libremente las capacidades de la IA y ampliar los límites de la investigación humana. </p><p>Ahora es tu turno. </p><p>Empieza a experimentar con estas estrategias de incitación y descubre cómo transforman tus interacciones con la IA. </p><p>¿Has creado un mensaje particularmente efectivo o creativo? Compártelo en las redes sociales: </p><ul role="list"><li><a target="_blank" href="https://x.com/AskVenice">X y etiqueta a @AskVenice</a> </li><li><a target="_blank" href="https://www.facebook.com/profile.php?id=61560073937818">Facebook</a> </li><li><a target="_blank" href="https://www.instagram.com/tryvenice.ai/">Instagram</a> </li></ul><p>Nos encanta ver cómo nuestra comunidad usa Venice de manera innovadora.</p><p>‍</p></aside></div><a href="../../chat.html" class="btn w-button">Try it Now</a></div></div></div></section><section class="characters-home-section divider-uper"><div class="main-container"><div class="padding-verticle _64-64"><div class="footer-content-wrap"><div class="left-social-wrap"><a href="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html#" class="footer-brand w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66927e6a27634c3b2b0d4040_download%20(7).svg" loading="lazy" data-theme="light-only" alt="" class="footer-logo"/><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/670ea1200cff6b81bc4efef6_image%20(20).webp" loading="lazy" data-theme="dark-only" alt="" class="footer-logo"/></a><div class="para-14px margin-8px">AI privada y sin permisos<br/></div><div class="wraper-flex-horizontal"><a href="https://x.com/askvenice" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66927d9e7eef196e86a039f8_download%20(3).svg" loading="lazy" alt="" class="social-icon"/></a><a href="https://www.facebook.com/veniceai" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66fff37389c8f6c4237e70bc_facebook-app-symbol.webp" loading="lazy" alt="" class="social-icon facebook"/></a><a href="https://www.instagram.com/tryvenice.ai/" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66927debb9caea629b2e73db_download%20(5).svg" loading="lazy" alt="" class="social-icon insta"/></a><a href="https://warpcast.com/venice-ai" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66927dc3fa86c68c051a3dbd_download%20(4).svg" loading="lazy" alt="" class="social-icon insta"/></a><a href="https://www.youtube.com/@askvenice" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66e174bdd9a72009f8a4aecb_brand-youtube.svg" loading="lazy" alt="" class="social-icon linked"/></a><a href="https://www.tiktok.com/@askvenice" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66e174f2a13a5b5bcf9bcd96_brand-tiktok.svg" loading="lazy" alt="" class="social-icon linked"/></a><a href="https://www.linkedin.com/company/venice-ai/" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/66e1746c2610b12bf875693c_brand-linkedin%20(3).svg" loading="lazy" alt="" class="social-icon linked"/></a><a href="https://discord.gg/BgmZpK2Tt9" target="_blank" class="wraper-social w-inline-block"><img src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/67975b1da2a92499ca956c9b_discord%20(1).png" loading="lazy" alt="" class="social-icon linked"/></a></div></div><div class="footer-right-wrap"><div class="link-wrap"><div class="para-16px footer">Venecia</div><a href="../../chat.html" class="footer-link">Charla</a><a href="../blog.html" class="footer-link">Blog</a><a href="../media.html" class="footer-link">Medios</a><a href="../api.html" class="footer-link">API</a><a href="../faqs.html" class="footer-link">Preguntas frecuentes</a><a href="../pricing.html" class="footer-link">Fijación</a></div><div class="link-wrap"><div class="para-16px footer">Jurídico</div><a href="../legal/tos.html" class="footer-link">Términos de servicio</a><a href="../legal/privacy-policy.html" class="footer-link">Política de privacidad</a><a href="../legal/cookie-policy.html" class="footer-link">Política de cookies</a></div><a href="https://mor.org/" target="_blank" class="morpheus-link w-inline-block"></a></div></div></div></div></section></div><div class="settings-wrapper"><div data-w-id="a82ae847-18dc-5b1d-8b8e-55bc729a5f69" class="settings-empty"></div><div class="settings"><div class="settings-top-wrapper"><div class="settings-title">Ajustes</div><div data-w-id="a82ae847-18dc-5b1d-8b8e-55bc729a5f6e" class="settings-close-icon-wrapper"><img data-theme="light-only" loading="lazy" alt="" src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/671cd174249480e4a65902b0_close%20(1).webp" class="settings-close-icon"/><img data-theme="dark-only" loading="lazy" alt="" src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/671cd174ea1fea578ba5bbc1_close%20(2).webp" class="settings-close-icon"/></div></div><div class="settings-items-wrapper"><div class="settings-item"><div class="settings-item-title">Esquema de colores</div><a tr-color-toggle="" href="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html#" class="theme-toggle-pill w-inline-block"><div class="theme-toggle"></div></a></div><div class="settings-item"><div class="settings-item-title">Idioma</div><div data-delay="0" data-hover="false" class="lang-dropdown w-dropdown"><div class="lang-dropdown-toggle w-dropdown-toggle"><div class="lang-dropdown-toggle-text">ES</div><div class="lang-dropdown-toggle-icon w-icon-dropdown-toggle"></div></div><nav class="lang-dropdown-list w-dropdown-list"><div class="lang-dropdown-list-inner"><div class="lang-list-wrapper w-locales-list"><div role="list" class="lang-list w-locales-items"><div role="listitem" class="lang-list-item w-locales-item"><a hreflang="en" href="../../blog/prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html" class="lang-dropdown-list-link w-inline-block"><div class="capitalize">en</div><div>English</div></a></div><div role="listitem" class="lang-list-item w-locales-item"><a hreflang="es" href="prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html" aria-current="page" class="lang-dropdown-list-link w-inline-block w--current"><div class="capitalize">es</div><div>Spanish</div></a></div><div role="listitem" class="lang-list-item w-locales-item"><a hreflang="de" href="../../de/blog/prompting-101-prompt-like-a-pro-to-get-the-most-out-of-venice-text-chat.html" class="lang-dropdown-list-link w-inline-block"><div class="capitalize">de</div><div>German</div></a></div></div></div></div></nav></div></div></div></div></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=668e6f67ec8b61b6033ef1c8" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/668e6f67ec8b61b6033ef1c8/js/veniceai.805b3d9f.d6bc5d415479e7d5.js" type="text/javascript"></script><!-- amped venice ai (noscript) -->
+<noscript><iframe src="https://amped.venice.ai/ns.html?id=GTM-KFP6HX49" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- end amped venice ai (noscript) --><script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to hide the header
+      function hideHeader() {
+        var headers = document.querySelectorAll('.embedly-card .hdr');
+        headers.forEach(function(header) {
+          header.style.display = 'none';
+        });
+      }
+
+      // Initial attempt to hide the header
+      hideHeader();
+
+      // Attempt to hide the header after a delay to ensure content is loaded
+      setTimeout(hideHeader, 2000);
+
+      // MutationObserver to watch for changes in the DOM and hide header if necessary
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          hideHeader();
+        });
+      });
+
+      // Start observing the document for changes
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+  </script></body></html>

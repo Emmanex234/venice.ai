@@ -147,7 +147,10 @@ flex-direction: row;
 justify-content: space-between;
 
 }
-
+.stats p strong{
+  color: #6b6767;
+  font-size: 18px;
+}
 .stats .negative {
 color: #ff4d4d;
 }

@@ -47,7 +47,38 @@
     <div class="airdrop-section">
       <div class="airdrop-info">
         <h2>Airdrop</h2>
-        <p>Airdrop ends in <strong>41 days</strong></p>
+        <p>Airdrop ends in <strong id="airdrop-countdown">41 days</strong></p>
+
+        <script>
+            // Set the start date (midnight in local time)
+            const startDate = new Date(2024, 0, 30); // January 30, 2024 (Months are zero-based in JS)
+        
+            // Total days for the airdrop
+            const totalDays = 41;
+        
+            function updateCountdown() {
+                const today = new Date(); // Get today's date
+        
+                // Set both dates to midnight to prevent time zone issues
+                today.setHours(0, 0, 0, 0);
+                startDate.setHours(0, 0, 0, 0);
+        
+                // Calculate days elapsed
+                const timeDiff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+                const remainingDays = totalDays - timeDiff; // Days left
+        
+                // Update countdown display
+                document.getElementById("airdrop-countdown").innerText = 
+                    remainingDays > 0 ? remainingDays + " days" : "41 days";
+            }
+        
+            // Call function initially
+            updateCountdown();
+        
+            // Update every 24 hours
+            setInterval(updateCountdown, 24 * 60 * 60 * 1000);
+        </script>
+
       </div>
       <a href="/token/connect_wallet.html"><button class="connect-wallet">Connect Wallet</button></a>
     </div>
